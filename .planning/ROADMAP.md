@@ -30,6 +30,11 @@ Each phase delivers a demonstrable, testable capability. Dependencies flow forwa
 
 **Rationale:** This phase establishes the non-negotiable foundation. Files must be stored securely outside web root (UPLOAD-04). Authentication must exist before any protected operations (SEC-01, SEC-04). Basic upload with progress indicators enables the admin workflow that follows. Metadata storage format must be designed early to support extensibility (META-07).
 
+**Plans:**
+- `01-01-PLAN.md` — Database schema and TypeScript types
+- `01-02-PLAN.md` — Secure file storage system
+- `01-03-PLAN.md` — Authentication and upload infrastructure
+
 **Success Criteria:**
 1. Admin can log in to a protected interface (requires authentication)
 2. Admin can upload a video file (up to 50GB) with real-time progress indicator

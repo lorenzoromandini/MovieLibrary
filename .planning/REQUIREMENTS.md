@@ -167,6 +167,16 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ADMIN-05 | Phase 1 | Pending |
 | ADMIN-06 | Phase 1 | Pending |
 
+**Phase Mapping Summary:**
+
+| Phase | Name | Requirement Count |
+|-------|------|-------------------|
+| Phase 1 | Foundation | 11 |
+| Phase 2 | Upload & Metadata Core | 6 |
+| Phase 3 | Grid, Search & Admin | 13 |
+| Phase 4 | Detail, Download & Rate Limiting | 6 |
+| Phase 5 | Admin Polish & Security Hardening | 0* |
+
 **Coverage:**
 - v1 requirements: 33 total
 - Mapped to phases: 33
