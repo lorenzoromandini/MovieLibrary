@@ -43,7 +43,7 @@ Each phase delivers a demonstrable, testable capability. Dependencies flow forwa
 5. No public registration endpoint exists (access is controlled)
 6. Upload queue shows current uploads and their status
 7. Unauthenticated users see access request page (not movie grid)
-8. Admin can generate unique single-use access tokens for invited users
+8. Admin can generate unique single-use access tokens for approved users
 9. Token entry form validates tokens and activates user session
 10. Authenticated sessions persist via secure httpOnly cookies
 
@@ -267,10 +267,10 @@ Per REQUIREMENTS.md, these remain out of scope for v1:
 
 **Success Criteria:**
 1. Users can submit support tickets (bug reports, inquiries)
-2. Users can request movies to be added (with title, year, optional TMDb/IMDb ID)
+2. Users can request movies/series/anime to be added (with title, year, optional TMDb/IMDb ID)
 3. Admin panel shows all tickets and requests with filtering
 4. Admin can respond to tickets and update status
-5. Admin can approve/reject/complete movie requests
+5. Admin can approve/reject/complete media requests
 6. Users see their ticket/request history
 7. Email notifications sent on status changes
 

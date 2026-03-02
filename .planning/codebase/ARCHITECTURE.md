@@ -6,7 +6,7 @@
 
 ## Overview
 
-This is a private movie library download service built as a full-stack web application. The system allows an administrator to upload large video files, automatically fetch metadata from external APIs (TMDb, OMDb), and provides a visual grid interface for invited users to browse, search, and download movies.
+This is a private movie library download service built as a full-stack web application. The system allows an administrator to upload large video files, automatically fetch metadata from external APIs (TMDb, OMDb), and provides a visual grid interface for authenticated users to browse, search, and download movies.
 
 **Core Value Proposition:** Admin uploads a movie file with minimal identifying info; the system automatically enriches it with complete metadata; end users can quickly browse, search, and download.
 
@@ -259,15 +259,15 @@ interface MovieMetadata {
 | PUT | `/admin/support/tickets/:id` | Admin | Update ticket (status, response) |
 | DELETE | `/admin/support/tickets/:id` | Admin | Delete ticket |
 
-### Movie Request Endpoints
+### Media Request Endpoints
 
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
-| POST | `/requests` | Required | Submit a movie request |
+| POST | `/requests` | Required | Submit a media request (movie, series, or anime) |
 | GET | `/requests/my` | Required | List user's own requests |
 | GET | `/requests/:id` | Required | Get request details |
 
-### Movie Request Endpoints (Admin)
+### Media Request Endpoints (Admin)
 
 | Method | Endpoint | Auth | Description |
 |--------|----------|------|-------------|
@@ -348,7 +348,7 @@ client/src/pages/
 │   ├── Series.tsx        # Manage series
 │   ├── Users.tsx         # User management
 │   ├── SupportTickets.tsx # Manage support tickets
-│   ├── MovieRequests.tsx  # Manage movie requests
+│   ├── MediaRequests.tsx  # Manage media requests (movies, series, anime)
 │   └── Relationships.tsx  # Manage related media
 └── NotFound.tsx          # 404 page
 ```
@@ -1053,15 +1053,15 @@ CREATE INDEX idx_tickets_type ON support_tickets(ticket_type);
 CREATE INDEX idx_tickets_created ON support_tickets(created_at);
 ```
 
-#### movie_requests (NEW)
+#### media_requests (NEW)
 
-User requests for movies to be added to library.
+User requests for movies, series, or anime to be added to library.
 
 ```sql
-CREATE TABLE movie_requests (
+CREATE TABLE media_requests (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   user_id INTEGER REFERENCES users(id) ON DELETE SET NULL,
-  title TEXT NOT NULL,                   -- Requested movie/series title
+  title TEXT NOT NULL,                   -- Requested movie/series/anime title
   year INTEGER,                          -- Release year (if known)
   media_type TEXT DEFAULT 'movie' CHECK(media_type IN ('movie', 'series', 'anime', 'unknown')),
   description TEXT,                      -- Additional details from user
@@ -1073,9 +1073,9 @@ CREATE TABLE movie_requests (
   updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE INDEX idx_requests_user ON movie_requests(user_id);
-CREATE INDEX idx_requests_status ON movie_requests(status);
-CREATE INDEX idx_requests_created ON movie_requests(created_at);
+CREATE INDEX idx_requests_user ON media_requests(user_id);
+CREATE INDEX idx_requests_status ON media_requests(status);
+CREATE INDEX idx_requests_created ON media_requests(created_at);
 ```
 
 ### JSON Metadata Structure

@@ -96,9 +96,9 @@ Deferred to future release. Tracked but not in current roadmap.
 ### User Support & Communication (NEW)
 
 - **SUPPORT-01**: Users can submit contact forms to report problems/bugs
-- **SUPPORT-02**: Users can request specific movies to be added to library
+- **SUPPORT-02**: Users can request specific media (movies, series, anime) to be added to library
 - **SUPPORT-03**: Admin can view all support tickets in admin panel
-- **SUPPORT-04**: Admin can view all movie requests in admin panel
+- **SUPPORT-04**: Admin can view all media requests in admin panel
 - **SUPPORT-05**: Admin can mark tickets/requests as resolved/pending/rejected
 - **SUPPORT-06**: Users receive confirmation when ticket/request is submitted
 
@@ -137,7 +137,7 @@ Deferred to future release. Tracked but not in current roadmap.
 - **UI-14**: Recently added section
 - **UI-15**: Watch list/favorites (per user, if multi-user added)
 - **UI-16**: Contact/support form in user interface
-- **UI-17**: Movie request form in user interface
+- **UI-17**: Media request form in user interface
 - **UI-18**: Series browsing view with season/episode navigation
 
 ### Admin Features
@@ -149,7 +149,7 @@ Deferred to future release. Tracked but not in current roadmap.
 - **ADMIN-11**: Backup/restore functionality
 - **ADMIN-12**: Manage TV series and episodes
 - **ADMIN-13**: Link/unlink related movies
-- **ADMIN-14**: Manage support tickets and movie requests
+- **ADMIN-14**: Manage support tickets and media requests
 
 ### Performance & Scale
 

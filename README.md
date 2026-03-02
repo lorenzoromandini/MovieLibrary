@@ -2,13 +2,13 @@
 
 **A private media collection for friends and family.**
 
-This is a personal media library service where you can browse and download movies, TV series, and anime from my collection. Access is by invitation and requires admin approval.
+This is a personal media library service where you can browse and download movies, TV series, and anime from my collection. The site is publicly accessible, but content requires admin-approved access tokens.
 
 ---
 
 ## 🔐 How to Get Access
 
-This service is private and invitation-only. Here's how the process works:
+This service uses token-based access control. The website is publicly accessible, but you'll need an approved account to view content. Here's how the process works:
 
 ### Step 1: Register
 Visit the website and click **"Request Access"** on the home page. You'll need to provide:
