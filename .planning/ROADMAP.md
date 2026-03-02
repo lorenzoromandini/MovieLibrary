@@ -256,5 +256,106 @@ Per REQUIREMENTS.md, these remain out of scope for v1:
 
 ---
 
+## Version 2: Enhanced Features Roadmap
+
+### Phase 6: User Communication & Support System
+**Goal:** Users can contact admin for problems and request specific movies to be added.
+
+**Dependencies:** Phase 1-5 complete (stable foundation)
+
+**Requirements:** SUPPORT-01..06, UI-16..17, ADMIN-14
+
+**Success Criteria:**
+1. Users can submit support tickets (bug reports, inquiries)
+2. Users can request movies to be added (with title, year, optional TMDb/IMDb ID)
+3. Admin panel shows all tickets and requests with filtering
+4. Admin can respond to tickets and update status
+5. Admin can approve/reject/complete movie requests
+6. Users see their ticket/request history
+7. Email notifications sent on status changes
+
+---
+
+### Phase 7: TV Series & Anime Support
+**Goal:** Extend system to support TV series and anime with seasons and episodes.
+
+**Dependencies:** Phase 1-5 complete
+
+**Requirements:** SERIES-01..08, UI-18, ADMIN-12, SRCH-12..13
+
+**Success Criteria:**
+1. Admin can create series entries with metadata
+2. Episodes can be uploaded individually and linked to series
+3. Episodes have season/episode numbers and individual titles
+4. Users can view series page with organized episode list
+5. Users can download individual episodes
+6. Series appear in search with clear type indication
+7. Episodes can be batch-uploaded by admin
+8. Series support different statuses (ongoing, completed, cancelled)
+
+**Database Changes:**
+- Migrate `movies` table to `media_items` with `media_type` column
+- Add `parent_series_id`, `season_number`, `episode_number`, `episode_title` columns
+- Add series-specific metadata fields
+
+---
+
+### Phase 8: Related Media Linking
+**Goal:** Link related movies/series (sequels, prequels, remakes, etc.) for enhanced discovery.
+
+**Dependencies:** Phase 6-7 (media items and series support)
+
+**Requirements:** RELATED-01..05, ADMIN-13
+
+**Success Criteria:**
+1. Admin can link any two media items as related
+2. Relationship types: sequel, prequel, remake, spin-off, same universe, adaptation, related
+3. Users see "Related Media" section on detail pages
+4. Links are bidirectional (A→B implies B→A)
+5. Series can be linked to movies (and vice versa)
+6. Related items show relationship type and allow navigation
+
+**Database Changes:**
+- Add `media_relationships` table with source/target media IDs and relationship type
+
+---
+
+## v2 Traceability
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| SUPPORT-01 | Phase 6 | Pending |
+| SUPPORT-02 | Phase 6 | Pending |
+| SUPPORT-03 | Phase 6 | Pending |
+| SUPPORT-04 | Phase 6 | Pending |
+| SUPPORT-05 | Phase 6 | Pending |
+| SUPPORT-06 | Phase 6 | Pending |
+| SERIES-01 | Phase 7 | Pending |
+| SERIES-02 | Phase 7 | Pending |
+| SERIES-03 | Phase 7 | Pending |
+| SERIES-04 | Phase 7 | Pending |
+| SERIES-05 | Phase 7 | Pending |
+| SERIES-06 | Phase 7 | Pending |
+| SERIES-07 | Phase 7 | Pending |
+| SERIES-08 | Phase 7 | Pending |
+| RELATED-01 | Phase 8 | Pending |
+| RELATED-02 | Phase 8 | Pending |
+| RELATED-03 | Phase 8 | Pending |
+| RELATED-04 | Phase 8 | Pending |
+| RELATED-05 | Phase 8 | Pending |
+| UI-16 | Phase 6 | Pending |
+| UI-17 | Phase 6 | Pending |
+| UI-18 | Phase 7 | Pending |
+| SRCH-12 | Phase 7 | Pending |
+| SRCH-13 | Phase 7 | Pending |
+| ADMIN-12 | Phase 7 | Pending |
+| ADMIN-13 | Phase 8 | Pending |
+| ADMIN-14 | Phase 6 | Pending |
+
+**v2 Coverage:** 28/28 requirements mapped ✓
+
+---
+
 *Roadmap created: 2025-03-02*
+*Updated: 2025-03-02 with v2 requirements*
 *Next step: `/gsd-plan-phase 1` to begin Phase 1 planning*

@@ -93,12 +93,42 @@ Requirements for initial release. Each maps to roadmap phases.
 
 Deferred to future release. Tracked but not in current roadmap.
 
+### User Support & Communication (NEW)
+
+- **SUPPORT-01**: Users can submit contact forms to report problems/bugs
+- **SUPPORT-02**: Users can request specific movies to be added to library
+- **SUPPORT-03**: Admin can view all support tickets in admin panel
+- **SUPPORT-04**: Admin can view all movie requests in admin panel
+- **SUPPORT-05**: Admin can mark tickets/requests as resolved/pending/rejected
+- **SUPPORT-06**: Users receive confirmation when ticket/request is submitted
+
+### TV Series & Anime Support (NEW)
+
+- **SERIES-01**: Admin can create TV series entries with metadata
+- **SERIES-02**: TV series have seasons and episodes structure
+- **SERIES-03**: Episodes can be associated with video files (like movies)
+- **SERIES-04**: Episodes have individual metadata (title, episode number, season, runtime, plot)
+- **SERIES-05**: Users can view series detail page with episode list
+- **SERIES-06**: Users can download individual episodes
+- **SERIES-07**: Series support "watch status" tracking (optional for v2)
+- **SERIES-08**: Episodes can be batch-uploaded by admin
+
+### Related Movies (NEW)
+
+- **RELATED-01**: Admin can link movies as related (sequel, prequel, remake, etc.)
+- **RELATED-02**: Related links have relationship type (sequel, prequel, remake, spin-off, same universe, etc.)
+- **RELATED-03**: Users see related movies section on detail page
+- **RELATED-04**: Related movies are bidirectionally linked
+- **RELATED-05**: TV series can have related movies (and vice versa)
+
 ### Search Enhancement
 
 - **SRCH-08**: Full-text search across plot summaries
 - **SRCH-09**: Filter by minimum rating
 - **SRCH-10**: Filter by production country
 - **SRCH-11**: Saved searches/bookmarks
+- **SRCH-12**: Search/filter TV series and episodes
+- **SRCH-13**: Filter by content type (movies, series, anime)
 
 ### User Experience
 
@@ -106,6 +136,9 @@ Deferred to future release. Tracked but not in current roadmap.
 - **UI-13**: Movie collections/series grouping
 - **UI-14**: Recently added section
 - **UI-15**: Watch list/favorites (per user, if multi-user added)
+- **UI-16**: Contact/support form in user interface
+- **UI-17**: Movie request form in user interface
+- **UI-18**: Series browsing view with season/episode navigation
 
 ### Admin Features
 
@@ -114,6 +147,9 @@ Deferred to future release. Tracked but not in current roadmap.
 - **ADMIN-09**: Collection statistics dashboard
 - **ADMIN-10**: Import from CSV/spreadsheet
 - **ADMIN-11**: Backup/restore functionality
+- **ADMIN-12**: Manage TV series and episodes
+- **ADMIN-13**: Link/unlink related movies
+- **ADMIN-14**: Manage support tickets and movie requests
 
 ### Performance & Scale
 

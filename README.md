@@ -1,8 +1,8 @@
 # 🎬 MovieLibrary
 
-**A private movie collection for friends and family.**
+**A private media collection for friends and family.**
 
-This is a personal movie library service where you can browse and download movies from my collection. Access is by invitation and requires admin approval.
+This is a personal media library service where you can browse and download movies, TV series, and anime from my collection. Access is by invitation and requires admin approval.
 
 ---
 
@@ -42,30 +42,51 @@ After you register:
 Once your account is activated, you can:
 
 ### Browse the Collection
-- View all movies in a visual poster grid
-- Movies are sorted by recently added by default
+- View all movies, TV series, and anime in a visual poster grid
+- Content is sorted by recently added by default
 - Scroll through the entire collection
+- Series show episode counts and season information
 
 ### Search & Filter
-- **Search by title** — Type to find movies (supports both original and Italian titles)
+- **Search by title** — Type to find content (supports both original and Italian titles)
 - **Filter by year** — Select a specific year or range
 - **Filter by genre** — Select one or more genres
-- **Search by actor/director** — Find movies with your favorite actors
+- **Filter by type** — Show only movies, series, or anime
+- **Search by actor/director** — Find content with your favorite actors
 
 ### View Movie Details
 Click on any poster to see:
-- Large movie poster
+- Large poster
 - Original and Italian titles
 - Release year
 - Director and main cast
 - Runtime
 - Genres
 - Plot summary
+- **Related content** — See sequels, prequels, and related titles
 
-### Download Movies
-- Click the **Download** button on any movie detail page
+### View Series Details
+Click on a series to see:
+- Series overview and poster
+- List of seasons and episodes
+- Episode-specific titles and descriptions
+- Individual download buttons for each episode
+
+### Download Content
+- Click the **Download** button on any movie or episode page
 - Files download directly to your device (no streaming)
 - Supported formats: MP4, MKV, AVI, MOV, WebM
+
+### Request New Content
+Can't find what you're looking for?
+- Submit a **Movie Request** with the title and year
+- Admin will review and add it if available
+- Track status of your requests
+
+### Get Support
+Having issues with the service?
+- Submit a **Support Ticket** for bugs or technical problems
+- Contact admin directly for account issues
 
 ---
 
