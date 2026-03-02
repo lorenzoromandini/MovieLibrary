@@ -58,13 +58,22 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **SEC-02**: Files cannot be accessed via direct URL (must go through API)
 - [ ] **SEC-03**: Rate limiting prevents download abuse (configurable per IP)
 - [ ] **SEC-04**: Admin interface requires authentication
-- [ ] **SEC-05**: No public registration endpoint exists
-- [ ] **SEC-06**: Home page shows access request form (not movie grid) to unauthenticated users
-- [ ] **SEC-07**: Admin can generate unique access tokens for invited users
-- [ ] **SEC-08**: Each token is single-use and tied to the user's session
-- [ ] **SEC-09**: Token entry form validates and activates user session
-- [ ] **SEC-10**: Invalid/expired tokens show appropriate error message
-- [ ] **SEC-11**: Authenticated sessions persist via secure httpOnly cookies
+- [ ] **SEC-05**: Registration endpoint is public and requires name, surname, and email
+- [ ] **SEC-06**: Upon registration, user account is created with PENDING status
+- [ ] **SEC-07**: Pending users cannot access movie content
+- [ ] **SEC-08**: System generates unique confirmation token upon registration
+- [ ] **SEC-09**: Admin can view all pending registrations in admin panel
+- [ ] **SEC-10**: Admin can approve pending registration
+- [ ] **SEC-11**: Admin can reject pending registration
+- [ ] **SEC-12**: Upon approval, system automatically sends confirmation token to user's email
+- [ ] **SEC-13**: Upon rejection, system automatically sends rejection email to user
+- [ ] **SEC-14**: User enters confirmation token on public token validation page
+- [ ] **SEC-15**: Token validation activates user account and creates authenticated session
+- [ ] **SEC-16**: Each confirmation token is single-use and expires after activation
+- [ ] **SEC-17**: Invalid/expired tokens show appropriate error message
+- [ ] **SEC-18**: Authenticated sessions persist via secure httpOnly cookies
+- [ ] **SEC-19**: Home page shows registration form to unauthenticated users
+- [ ] **SEC-20**: Authenticated users see movie grid; pending users see "approval pending" message
 
 ### Admin Interface
 
@@ -74,6 +83,11 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **ADMIN-04**: Admin can re-fetch metadata for existing movies
 - [ ] **ADMIN-05**: Admin can upload new movies with identifier input
 - [ ] **ADMIN-06**: Admin sees upload queue/progress
+- [ ] **ADMIN-07**: Admin can view all pending user registrations
+- [ ] **ADMIN-08**: Admin can approve pending registration (sends confirmation token via email)
+- [ ] **ADMIN-09**: Admin can reject pending registration (sends rejection email)
+- [ ] **ADMIN-10**: Admin can view approved/active users
+- [ ] **ADMIN-11**: Admin can revoke user access
 
 ## v2 Requirements
 
@@ -116,7 +130,6 @@ Explicitly excluded. Documented to prevent scope creep.
 |---------|--------|
 | Video streaming | Explicitly download-only per requirements |
 | Transcoding | CPU intensive, unnecessary complexity for download-only use |
-| User registration system | Private/controlled access only, adds unnecessary complexity |
 | Public sharing links | Would require complex permission model |
 | Mobile app | Web-only requirement |
 | Automatic download from external sources | Legal gray area, reliability issues |
@@ -124,6 +137,10 @@ Explicitly excluded. Documented to prevent scope creep.
 | Social features (comments, ratings) | Not mentioned in requirements |
 | Subtitle management | Not mentioned, adds complexity |
 | Video playback in browser | Explicitly download-only |
+| Password-based login for regular users | Token-based authentication sufficient |
+| Multiple user roles | Single user role (authenticated user) |
+| User profile management | Not needed for basic access |
+| Password reset functionality | Tokens are single-use, admin can generate new ones |
 
 ## Traceability
 
