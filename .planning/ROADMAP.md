@@ -22,26 +22,30 @@ Each phase delivers a demonstrable, testable capability. Dependencies flow forwa
 ## Phases
 
 ### Phase 1: Foundation
-**Goal:** Infrastructure exists for secure file storage, database operations, and access control with admin upload capability.
+**Goal:** Infrastructure exists for secure file storage, database operations, and access control with admin upload capability and token-based user authentication.
 
 **Dependencies:** None (ground floor)
 
-**Requirements:** UPLOAD-01, UPLOAD-02, UPLOAD-03, UPLOAD-04, META-07, SEC-01, SEC-02, SEC-04, SEC-05, ADMIN-05, ADMIN-06
+**Requirements:** UPLOAD-01, UPLOAD-02, UPLOAD-03, UPLOAD-04, META-07, SEC-01, SEC-02, SEC-04, SEC-05, SEC-06, SEC-07, SEC-08, SEC-09, SEC-10, SEC-11, ADMIN-05, ADMIN-06
 
-**Rationale:** This phase establishes the non-negotiable foundation. Files must be stored securely outside web root (UPLOAD-04). Authentication must exist before any protected operations (SEC-01, SEC-04). Basic upload with progress indicators enables the admin workflow that follows. Metadata storage format must be designed early to support extensibility (META-07).
+**Rationale:** This phase establishes the non-negotiable foundation. Files must be stored securely outside web root (UPLOAD-04). Authentication must exist before any protected operations (SEC-01, SEC-04). Basic upload with progress indicators enables the admin workflow that follows. Metadata storage format must be designed early to support extensibility (META-07). Token-based authentication ensures controlled access - users must request access from admin who generates unique single-use tokens.
 
 **Plans:**
-- `01-01-PLAN.md` — Database schema and TypeScript types
+- `01-01-PLAN.md` — Database schema and TypeScript types (updated for token system)
 - `01-02-PLAN.md` — Secure file storage system
-- `01-03-PLAN.md` — Authentication and upload infrastructure
+- `01-03-PLAN.md` — Authentication and upload infrastructure (includes token system)
 
 **Success Criteria:**
 1. Admin can log in to a protected interface (requires authentication)
 2. Admin can upload a video file (up to 50GB) with real-time progress indicator
 3. Uploaded files are stored outside web root with secure IDs, inaccessible by direct URL
-4. Database schema supports extensible movie metadata
+4. Database schema supports extensible movie metadata and token-based authentication
 5. No public registration endpoint exists (access is controlled)
 6. Upload queue shows current uploads and their status
+7. Unauthenticated users see access request page (not movie grid)
+8. Admin can generate unique single-use access tokens for invited users
+9. Token entry form validates tokens and activates user session
+10. Authenticated sessions persist via secure httpOnly cookies
 
 ---
 
