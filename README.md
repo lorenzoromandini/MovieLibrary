@@ -173,8 +173,9 @@ The site works on mobile devices too:
 | **1. Register** | Visit site → Request Access → Enter name, surname, email |
 | **2. Wait** | Registration is pending admin approval |
 | **3. Receive** | If approved, check email for confirmation token |
-| **4. Activate** | Enter token or click email link → Browse movies |
-| **5. Download** | Click poster → View details → Click Download |
+| **4. Activate** | Enter token or click email link → Browse media |
+| **5. Browse** | Search, filter, and explore the collection |
+| **6. Download** | Click poster → View details → Click Download |
 | **Need help?** | Contact me directly |
 
 ---
