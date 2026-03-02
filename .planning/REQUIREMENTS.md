@@ -59,6 +59,12 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **SEC-03**: Rate limiting prevents download abuse (configurable per IP)
 - [ ] **SEC-04**: Admin interface requires authentication
 - [ ] **SEC-05**: No public registration endpoint exists
+- [ ] **SEC-06**: Home page shows access request form (not movie grid) to unauthenticated users
+- [ ] **SEC-07**: Admin can generate unique access tokens for invited users
+- [ ] **SEC-08**: Each token is single-use and tied to the user's session
+- [ ] **SEC-09**: Token entry form validates and activates user session
+- [ ] **SEC-10**: Invalid/expired tokens show appropriate error message
+- [ ] **SEC-11**: Authenticated sessions persist via secure httpOnly cookies
 
 ### Admin Interface
 
